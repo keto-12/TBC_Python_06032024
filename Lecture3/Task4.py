@@ -4,8 +4,7 @@
 # ასევე მიიღებს დოლარში თანხას, რომელიც შემოყვანილ თარიღში გადაიხადა ბიტკოინის შესაძენად
 # და ეკრანზე გამოიტანს დოლარში თანხას რომელიც მოიგო ან დაკარგა
 # დღევანდელი ფასის გათვალისწინებით. იხ module forex-python
-import requests
-import datetime
 
+import requests
 
 date_bought=str(input("What date have you bought bitcoins.e.g.2020-12-31:"))

@@ -6,17 +6,13 @@
 #და 13 მნიშვნელობა (A, K, Q, J, 10, 9, 8, 7, 6, 5, 4, 3, 2))
 
 import random
-import string
-len(2)
-card_=random.randint(2,10)
-card_colour = ()
 
-cards=string.ascii_letters()
-deck[]
-for suit in ["C","D","H","S"]:
-    for rank in ["A", "K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3", "2"]:
-        deck appen
+card_colors = "♣", "♦", "♥", "♠"
+card_values = 2, 3, 4, 5, 6, 7, 8, 9, 10,"J","Q", "K", "A"
 
-random_card_with_numbers=random.randint(2,10)
-print(random_card_with_numbers)
-random_card_with_figures=
+def random_card():
+     card_color = random.choices(card_colors)
+     card_value = random.choices(card_values)
+     return (f" {card_color}, {card_value} ")
+print(random_card())
+
