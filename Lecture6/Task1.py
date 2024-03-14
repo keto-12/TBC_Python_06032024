@@ -12,7 +12,7 @@
 row = 1
 while row <= 10:
      col = 1
-     while col <= 10:
+     while col <= row:
          result = col * row
          print(f"{col} x {row} = {result}", end="\t")
          col += 1

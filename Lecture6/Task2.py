@@ -6,7 +6,6 @@ DB_PASSWORD ="Georgia"
 MAX_TRIES=3
 
 for i in range (1,4):
-    DB_PASSWORD = "Georgia"
     input_password = input("Please enter password:")
     if (input_password == DB_PASSWORD and i<=3):
         print("Hello from Georgia")
@@ -16,11 +15,3 @@ for i in range (1,4):
 
 if (input_password != DB_PASSWORD and i>=3):
     print("You are blocked")
-
-
-
-
-
-
-
-
