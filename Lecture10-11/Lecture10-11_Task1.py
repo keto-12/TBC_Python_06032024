@@ -17,5 +17,3 @@ for n in range (2, 100000):
     result+=(-1)**(n-1)*(1/float(2*n-1))
     answer=4*result
     print(answer)
-
-
