@@ -18,24 +18,58 @@
 #res = str(test_list)[1:-1]
 #List /@ Rule @@@ lop
 
-input_number =int(input("Please, enter an integer between 0 and 1000:"))
-
-if input_number <0 or input_number > 1000:
-    print(int(input("That is not correct input. Please, enter positive integer between 0 and 1000:" )))
-    exit(1)
-
-def Collatz(input_number):
-    out = []
+# input_number =int(input("Please, enter an integer between 0 and 1000:"))
+#
+# if input_number <0 or input_number > 1000:
+#     print("That is not correct input. Please, enter positive integer between 0 and 1000:")
+#     exit(1)
+#ეს რთული მიდგომაა
+#def Collatz(input_number):
+    #out = []
     # lop = out  #ვერ გავიგე როგორ გავაკეთო
     # [->} & @@@ lop
-    while input_number > 1:
-        if input_number % 2 == 0:
-            out.append(input_number // 2)
-            input_number = input_number // 2 # updating input_number
+    # while input_number > 1:
+    #     if input_number % 2 == 0:
+    #         out.append(input_number // 2)
+    #         input_number = input_number // 2 # updating input_number
+    #
+    #     elif input_number % 2 != 0:
+    #         out.append((input_number * 3) + 1)
+    #         input_number = (input_number* 3) + 1  # updating input_number
+    # print(str(out)[1:-1])
 
-        elif input_number % 2 != 0:
-            out.append((input_number * 3) + 1)
-            input_number = (input_number* 3) + 1  # updating input_number
-    print(str(out)[1:-1])
+#Collatz(input_number)
+# მიშას მიდგომა
 
-Collatz(input_number)
+input_number = int(input("Please, enter an integer between 0 and 1000:"))
+if input_number <=0 or input_number > 1000:
+     print("That is not correct input. Please, enter positive integer between 0 and 1000:")
+     exit(1)
+
+#  ეს ცვლადი შევქმენი მხოლოდ და მხოლოდ იმისთვის რომ პირველი რიცხვის დაბეჭდვისას არ დავბეჭდო ისარი ->
+is_first_number = True
+
+while input_number > 1:
+    if input_number % 2 == 0:
+        input_number = input_number // 2  # updating input_number
+    else:
+        input_number = (input_number * 3) + 1  # updating input_number
+    if is_first_number:
+        print(input_number, end="")
+    else:
+        print(" ->", input_number, end="")
+
+    is_first_number = False
+
+#სტუდენტის ამოხსნა
+
+n = int(input("Enter number (0 - 1000: "))
+
+print(n, end=" ")
+
+while n != 1:
+    if n % 2 == 0:
+        n = n // 2
+    else:
+        n = 3 * n + 1
+    print("->", n, end=" ")
